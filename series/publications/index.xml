@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Arne N. Langner</title>
+    <link>https://arne-langner.github.io/series/publications/</link>
+    <description>Recent content in Publications on Arne N. Langner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 11 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arne-langner.github.io/series/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book Release - Model-Driven Development of Akoma Ntoso Application Profiles</title>
+      <link>https://arne-langner.github.io/posts/2023/01/book-release-model-driven-development-of-akoma-ntoso-application-profiles/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://arne-langner.github.io/posts/2023/01/book-release-model-driven-development-of-akoma-ntoso-application-profiles/</guid>
+      <description>Good news, everybody: Our book &amp;lsquo;Model-Driven Development of Akoma Ntoso Application Profiles&amp;rsquo; has been released! The book is a collaboration with my friends and former colleagues Amelie Flatt and Olof Leps. In it we outline a methodological framework for the use of model-driven development approaches to creating subschemas of the international Akoma Ntoso XML vocabulary for legislative documents.
+What is it about? The book aims to serve as a practical and technical guide to teams that want to customize the international Akoma Ntoso standard for a more narrowly defined use-case.</description>
+    </item>
+    
+  </channel>
+</rss>
