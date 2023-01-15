@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XÖV basics on Arne N. Langner</title>
+    <link>https://arne-langner.github.io/de/series/x%C3%B6v-basics/</link>
+    <description>Recent content in XÖV basics on Arne N. Langner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 09 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arne-langner.github.io/de/series/x%C3%B6v-basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XÖV - Einfach erklärt</title>
+      <link>https://arne-langner.github.io/de/posts/2021/10/x%C3%B6v-einfach-erkl%C3%A4rt/</link>
+      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arne-langner.github.io/de/posts/2021/10/x%C3%B6v-einfach-erkl%C3%A4rt/</guid>
+      <description>XÖV (XML in der öffentlichen Verwaltung) ist eine Sammlung von Werkzeugen und Methoden zum Datenaustausch zwischen Software-Systemen der öffentlichen Verwaltung. Dieser Artikel beschreibt die grundlegenden Konzepte, die Motivation und die Arbeitsbereiche dieses Ökosystems. Darüber hinweis verweist er auf weitere Artikel, die angesprochene Aspekte im Detail ausführen.
+Hintergrund und Motivation Zum Zusammenwirken verschiedener Stellen der Verwaltung ist der Informationsaustausch zwischen deren Software-Systemen, sogenannten Fachanwendungen, erforderlich. Diese Informationen können zum Beispiel Antragsdaten, Registerauskünfte oder Statusbenachrichtigungen sein.</description>
+    </item>
+    
+    <item>
+      <title>XÖV - XML in der öffentlichen Verwaltung</title>
+      <link>https://arne-langner.github.io/de/posts/2021/09/x%C3%B6v-xml-in-der-%C3%B6ffentlichen-verwaltung/</link>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arne-langner.github.io/de/posts/2021/09/x%C3%B6v-xml-in-der-%C3%B6ffentlichen-verwaltung/</guid>
+      <description>Was ist XÖV? - Eine Einführung Einleitung XML in der öffentlichen Verwaltung, auch XÖV, bezeichnet einen Teilbereich der Verwaltungsdigitalisierung in Deutschland. Kernfunktion von XÖV ist die Abstimmung, Entwicklung und Pflege von offenen Standards, welche spezifizieren, wie Software-Systeme der öffentlichen Verwaltung Daten austauschen und zusammenwirken.
+Zu diesem Zweck definieren diese offenen Standards einheitliche Datenstrukturen und Kommunikationsszenarien für unterschiedliche Fachlichkeiten (z.B. Bauwesen, Meldewesen, Standesamtliches, etc.). Sie regeln damit, welche Stellen wie und mit wem kommunizieren, und geben ein geteiltes Vokabular vor, mit dem Sachverhalte unmissverständlich kommuniziert werden könnnen.</description>
+    </item>
+    
+  </channel>
+</rss>

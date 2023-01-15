@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arne N. Langner</title>
+    <link>https://arne-langner.github.io/</link>
+    <description>Recent content on Arne N. Langner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arne-langner.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraform - Visualizing State and Modules</title>
+      <link>https://arne-langner.github.io/posts/2022/10/terraform-visualizing-state-and-modules/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arne-langner.github.io/posts/2022/10/terraform-visualizing-state-and-modules/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Model-Driven Development of Akoma Ntoso Application Profiles</title>
+      <link>https://arne-langner.github.io/posts/2022/09/model-driven-development-of-akoma-ntoso-application-profiles/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arne-langner.github.io/posts/2022/09/model-driven-development-of-akoma-ntoso-application-profiles/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://arne-langner.github.io/about/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://arne-langner.github.io/about/</guid>
+      <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
+It makes use of a variety of open source projects including:
+https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper I&amp;rsquo;m a contractor and consultant who specializes in XÖV
+Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>https://arne-langner.github.io/references/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://arne-langner.github.io/references/</guid>
+      <description>Projects xOrganspende (selbstständig) Konzeption des XÖV-Fachmodells Entwicklung des Standards gemäß XÖV Best-practices Diskussion von Modellierungsvarianten mit Architekten des Kunden Qualitätssicherung der Spezifikation Überbrückungshilfe xBrücke (bei ]init[ AG) Anforderungserhebung zu den Kassensystemen der Bundesländer Planung der Entwicklung Entwicklung der ersten Version der Schnittstelle auf XÖV-Basis, Modellierung in UML/MagicDraw Vorstellung, Abstimmung und Weiterentwicklung der Schnittstelle E-Gesetzgebung, Teilprojekt Inhaltsdatenstandard (bei ]init[ AG) Architektur des Inhaltsdatenstandards LegalDocML.de Konzeption, Umsetzug und Pflege der Generierungsumgebung mittels XSLT Initiale Schema-Modellierung in UML Prototypische Modellierung von Rechtsetzungsdokumenten in Akoma Ntoso Abstimmung der Architektur mit UAG Standardisierung (BMI, BMJV, BfJ) XTA (bei ]init[ AG) Implementierung von Änderungsanträgen Change- und Releasemanagement Unterstützung des Expertengremiums und Moderation von Arbeitsgruppen Leitung der Entwicklung des XTA-Cllients (Beispiel-Implementierung des Standards) WaffE (bei ]init[ AG) Abstimmung von Anforderungen mit Kernteam Nationales Waffenregister Erzeugung eines Subschemas für die OZG-Umsetzung Generierung und Redaktion der Standard-Artefakte XhD (bei ]init[ AG) Modernisierung des XÖV-Zubehörs und Aktualisierung des XÖV-Fachmodells Erweiterung des Standards gemäß Gesetzesänderungen Abstimmung von Modellierungsvarianten und Unterstützung der Entscheidungsfindung XWaffe (bei ]init[ AG) Umsetzung neuer Standardversionen mit UML-Modellierung, DocBook-Redaktion und XML-Schemata Sichtung von Modellierungsentscheidungen Qualitätssicherung der Standardartefakte Entwicklung eines Testgenerators für XWaffe (Python-basiert) Certifications Professional Cloud Architect (Google - 2020, 2022) Associate Cloud Engineer (Google - 2021) ISO 27001 Foundation (APMG International - 2020) Certified Professional Requirements Engineer (Foundation) (IREB - 2020) Certified Professional for Software Architecture (FL) (iSAQB - 2019) The Open Group Architecture Framework (TOGAF) 1+2 (The Open Group - 2018) ITIL - IT Infrastructure Library (Foundation) (EXIN - 2016) PRINCE2 Foundation (APMG - 2016) Professional Scrum Product Owner (PSPO I) (Scrum.</description>
+    </item>
+    
+  </channel>
+</rss>
