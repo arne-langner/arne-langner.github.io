@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Arne Langner]">
-<meta name="description" content="In this post we&amp;rsquo;ll have a look at ways to generate visualisations using the openAI&amp;rsquo;s chatGPT, and diagrams-as-code.
-chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though." />
+<meta name="description" content="In this post we&amp;rsquo;ll have a look at ways to generate visualizations using the openAI&amp;rsquo;s ChatGPT, and diagrams-as-code.
+ChatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of ChatGPT does not provide any other output than text though." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,8 +40,8 @@ chatGPT does a great job at combining, summarizing and cross-referencing text. I
 
 
 <meta itemprop="name" content="ChatGPT 1 - Visualizing System Architecture using PlantUML">
-<meta itemprop="description" content="In this post we&rsquo;ll have a look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code.
-chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though."><meta itemprop="datePublished" content="2022-12-27T00:00:00+00:00" />
+<meta itemprop="description" content="In this post we&rsquo;ll have a look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code.
+ChatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of ChatGPT does not provide any other output than text though."><meta itemprop="datePublished" content="2022-12-27T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-12-27T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1083"><meta itemprop="image" content="https://arne-langner.github.io/"/>
 <meta itemprop="keywords" content="" />
@@ -49,14 +49,14 @@ chatGPT does a great job at combining, summarizing and cross-referencing text. I
 <meta name="twitter:image" content="https://arne-langner.github.io/"/>
 
 <meta name="twitter:title" content="ChatGPT 1 - Visualizing System Architecture using PlantUML"/>
-<meta name="twitter:description" content="In this post we&rsquo;ll have a look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code.
-chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though."/>
+<meta name="twitter:description" content="In this post we&rsquo;ll have a look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code.
+ChatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of ChatGPT does not provide any other output than text though."/>
 
 
 
     <meta property="og:title" content="ChatGPT 1 - Visualizing System Architecture using PlantUML" />
-<meta property="og:description" content="In this post we&rsquo;ll have a look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code.
-chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though." />
+<meta property="og:description" content="In this post we&rsquo;ll have a look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code.
+ChatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of ChatGPT does not provide any other output than text though." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/" /><meta property="og:image" content="https://arne-langner.github.io/"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-12-27T00:00:00+00:00" />
@@ -151,9 +151,9 @@ chatGPT does a great job at combining, summarizing and cross-referencing text. I
       
 
       <div class="post-content">
-        <p>In this post we&rsquo;ll have a look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code.</p>
-<p>chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though. As it turns out, this is not much of a dealbreaker, as ChatGPT is capable of producing both structured data and code. Combine this with one of the many diagram-as-code tools that use a domain-specific language to define the diagram content and layout and you have at your disposal the tools needed to generate all kinds of visualisations using ChatGPT.</p>
-<p>In this post, we will describe a (very basic) system architecture in text and use ChatGPT to generate a visualisation.</p>
+        <p>In this post we&rsquo;ll have a look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code.</p>
+<p>ChatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of ChatGPT does not provide any other output than text though. As it turns out, this is not much of a dealbreaker, as ChatGPT is capable of producing both structured data and code. Combine this with one of the many diagram-as-code tools that use a domain-specific language to define the diagram content and layout and you have at your disposal the tools needed to generate all kinds of visualizations using ChatGPT.</p>
+<p>In this post, we will describe a (very basic) system architecture in text and use ChatGPT to generate a visualization.</p>
 <h2 id="tools">Tools</h2>
 <p><strong>Note:</strong> In the examples shown here, I will be using the <a href="https://beta.openai.com/playground">openAI playground</a>. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests.</p>
 <p><a href="https://plantuml.com/en/">PlantUML</a> is a diagram-as-code tool that generates various UML diagrams from specifically structured text. It supports suitable diagrams for many static and dynamic contexts. A <a href="http://www.plantuml.com/plantuml">free web renderer</a> is available which I will be using for this example.</p>
@@ -241,7 +241,7 @@ chatGPT does a great job at combining, summarizing and cross-referencing text. I
 <li>ChatGPT frequently produces syntax errors, usually minor ones though, such as not quoting strings that contain spaces.</li>
 </ul>
 <h3 id="conclusion">Conclusion</h3>
-<p>Clearly using diagram-as-code tools works to generate visualisations, though it may require a bit of experimentation. Based on the success of this experiment I&rsquo;ll add a few more articles on other kinds of visualisations, such as graphviz and mermaid.js.</p>
+<p>Clearly using diagram-as-code tools works to generate visualizations, though it may require a bit of experimentation. Based on the success of this experiment I&rsquo;ll add a few more articles on other kinds of visualizations, such as graphviz and mermaid.js.</p>
 
       </div>
     </article>

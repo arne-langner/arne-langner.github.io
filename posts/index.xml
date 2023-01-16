@@ -35,11 +35,11 @@ What is it about? The book aims to serve as a practical and technical guide to t
             <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
             
             <guid>https://arne-langner.github.io/posts/2022/12/chatgpt-2-visualizing-project-timelines-with-mermaid.js/</guid>
-            <description>This is post no. 2 on visualizations using ChatGPT - see the first article here.
-In this post we&amp;rsquo;ll have another look at ways to generate visualisations using the openAI&amp;rsquo;s chatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
+            <description>This is the second post on visualizations using ChatGPT - see the first article here.
+In this post we&amp;rsquo;ll have another look at ways to generate visualizations using the openAI&amp;rsquo;s ChatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
 Tools Note: In the examples shown here, I will be using the openAI playground. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests.</description>
-            <content type="html"><![CDATA[<p><strong>This is post no. 2 on visualizations using ChatGPT - see the <a href="https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/">first article here</a>.</strong></p>
-<p>In this post we&rsquo;ll have another look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.</p>
+            <content type="html"><![CDATA[<p><strong>This is the second post on visualizations using ChatGPT - see the <a href="https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/">first article here</a>.</strong></p>
+<p>In this post we&rsquo;ll have another look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.</p>
 <h2 id="tools">Tools</h2>
 <p><strong>Note:</strong> In the examples shown here, I will be using the <a href="https://beta.openai.com/playground">openAI playground</a>. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests.</p>
 <p><a href="https://mermaid.js.org/intro/">mermaid.js</a> is another diagram-as-code framework that integrates well with a number of developer-centric tools, particularly many implementations of markdown, such as the one used in GitHub or GitLab. In keeping with this focus, mermaid.js supports a number of diagram types commonly used by developers, such as state, flow and sequence charts, git branch diagrams and entity-relation diagrams. It, too, comes with an <a href="https://mermaid.live/">online editor</a> to validate and render diagrams.</p>
@@ -95,11 +95,11 @@ Tools Note: In the examples shown here, I will be using the openAI playground. I
             <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
             
             <guid>https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/</guid>
-            <description>In this post we&amp;rsquo;ll have a look at ways to generate visualisations using the openAI&amp;rsquo;s chatGPT, and diagrams-as-code.
-chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though.</description>
-            <content type="html"><![CDATA[<p>In this post we&rsquo;ll have a look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code.</p>
-<p>chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though. As it turns out, this is not much of a dealbreaker, as ChatGPT is capable of producing both structured data and code. Combine this with one of the many diagram-as-code tools that use a domain-specific language to define the diagram content and layout and you have at your disposal the tools needed to generate all kinds of visualisations using ChatGPT.</p>
-<p>In this post, we will describe a (very basic) system architecture in text and use ChatGPT to generate a visualisation.</p>
+            <description>In this post we&amp;rsquo;ll have a look at ways to generate visualizations using the openAI&amp;rsquo;s ChatGPT, and diagrams-as-code.
+ChatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of ChatGPT does not provide any other output than text though.</description>
+            <content type="html"><![CDATA[<p>In this post we&rsquo;ll have a look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code.</p>
+<p>ChatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of ChatGPT does not provide any other output than text though. As it turns out, this is not much of a dealbreaker, as ChatGPT is capable of producing both structured data and code. Combine this with one of the many diagram-as-code tools that use a domain-specific language to define the diagram content and layout and you have at your disposal the tools needed to generate all kinds of visualizations using ChatGPT.</p>
+<p>In this post, we will describe a (very basic) system architecture in text and use ChatGPT to generate a visualization.</p>
 <h2 id="tools">Tools</h2>
 <p><strong>Note:</strong> In the examples shown here, I will be using the <a href="https://beta.openai.com/playground">openAI playground</a>. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests.</p>
 <p><a href="https://plantuml.com/en/">PlantUML</a> is a diagram-as-code tool that generates various UML diagrams from specifically structured text. It supports suitable diagrams for many static and dynamic contexts. A <a href="http://www.plantuml.com/plantuml">free web renderer</a> is available which I will be using for this example.</p>
@@ -187,7 +187,7 @@ chatGPT does a great job at combining, summarizing and cross-referencing text. I
 <li>ChatGPT frequently produces syntax errors, usually minor ones though, such as not quoting strings that contain spaces.</li>
 </ul>
 <h3 id="conclusion">Conclusion</h3>
-<p>Clearly using diagram-as-code tools works to generate visualisations, though it may require a bit of experimentation. Based on the success of this experiment I&rsquo;ll add a few more articles on other kinds of visualisations, such as graphviz and mermaid.js.</p>
+<p>Clearly using diagram-as-code tools works to generate visualizations, though it may require a bit of experimentation. Based on the success of this experiment I&rsquo;ll add a few more articles on other kinds of visualizations, such as graphviz and mermaid.js.</p>
 ]]></content>
         </item>
         

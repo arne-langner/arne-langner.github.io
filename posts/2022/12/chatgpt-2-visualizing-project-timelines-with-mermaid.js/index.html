@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Arne Langner]">
-<meta name="description" content="This is post no. 2 on visualizations using ChatGPT - see the first article here.
-In this post we&amp;rsquo;ll have another look at ways to generate visualisations using the openAI&amp;rsquo;s chatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
+<meta name="description" content="This is the second post on visualizations using ChatGPT - see the first article here.
+In this post we&amp;rsquo;ll have another look at ways to generate visualizations using the openAI&amp;rsquo;s ChatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
 Tools Note: In the examples shown here, I will be using the openAI playground. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
@@ -41,8 +41,8 @@ Tools Note: In the examples shown here, I will be using the openAI playground. I
 
 
 <meta itemprop="name" content="ChatGPT 2 - Visualizing Project Timelines with mermaid.js">
-<meta itemprop="description" content="This is post no. 2 on visualizations using ChatGPT - see the first article here.
-In this post we&rsquo;ll have another look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
+<meta itemprop="description" content="This is the second post on visualizations using ChatGPT - see the first article here.
+In this post we&rsquo;ll have another look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
 Tools Note: In the examples shown here, I will be using the openAI playground. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests."><meta itemprop="datePublished" content="2022-12-28T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-12-28T00:00:00+00:00" />
 <meta itemprop="wordCount" content="715"><meta itemprop="image" content="https://arne-langner.github.io/"/>
@@ -51,15 +51,15 @@ Tools Note: In the examples shown here, I will be using the openAI playground. I
 <meta name="twitter:image" content="https://arne-langner.github.io/"/>
 
 <meta name="twitter:title" content="ChatGPT 2 - Visualizing Project Timelines with mermaid.js"/>
-<meta name="twitter:description" content="This is post no. 2 on visualizations using ChatGPT - see the first article here.
-In this post we&rsquo;ll have another look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
+<meta name="twitter:description" content="This is the second post on visualizations using ChatGPT - see the first article here.
+In this post we&rsquo;ll have another look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
 Tools Note: In the examples shown here, I will be using the openAI playground. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests."/>
 
 
 
     <meta property="og:title" content="ChatGPT 2 - Visualizing Project Timelines with mermaid.js" />
-<meta property="og:description" content="This is post no. 2 on visualizations using ChatGPT - see the first article here.
-In this post we&rsquo;ll have another look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
+<meta property="og:description" content="This is the second post on visualizations using ChatGPT - see the first article here.
+In this post we&rsquo;ll have another look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.
 Tools Note: In the examples shown here, I will be using the openAI playground. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://arne-langner.github.io/posts/2022/12/chatgpt-2-visualizing-project-timelines-with-mermaid.js/" /><meta property="og:image" content="https://arne-langner.github.io/"/><meta property="article:section" content="posts" />
@@ -155,8 +155,8 @@ Tools Note: In the examples shown here, I will be using the openAI playground. I
       
 
       <div class="post-content">
-        <p><strong>This is post no. 2 on visualizations using ChatGPT - see the <a href="https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/">first article here</a>.</strong></p>
-<p>In this post we&rsquo;ll have another look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.</p>
+        <p><strong>This is the second post on visualizations using ChatGPT - see the <a href="https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/">first article here</a>.</strong></p>
+<p>In this post we&rsquo;ll have another look at ways to generate visualizations using the openAI&rsquo;s ChatGPT, and diagrams-as-code. This time we will focus on turning a verbal description of a work plan into a GANTT chart.</p>
 <h2 id="tools">Tools</h2>
 <p><strong>Note:</strong> In the examples shown here, I will be using the <a href="https://beta.openai.com/playground">openAI playground</a>. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests.</p>
 <p><a href="https://mermaid.js.org/intro/">mermaid.js</a> is another diagram-as-code framework that integrates well with a number of developer-centric tools, particularly many implementations of markdown, such as the one used in GitHub or GitLab. In keeping with this focus, mermaid.js supports a number of diagram types commonly used by developers, such as state, flow and sequence charts, git branch diagrams and entity-relation diagrams. It, too, comes with an <a href="https://mermaid.live/">online editor</a> to validate and render diagrams.</p>
