@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GPT on Arne N. Langner</title>
+    <link>https://arne-langner.github.io/series/gpt/</link>
+    <description>Recent content in GPT on Arne N. Langner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 27 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arne-langner.github.io/series/gpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatGPT 1 - Visualizing System Architecture using PlantUML</title>
+      <link>https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/</guid>
+      <description>In this post we&amp;rsquo;ll have a look at ways to generate visualisations using the openAI&amp;rsquo;s chatGPT, and diagrams-as-code.
+chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though.</description>
+    </item>
+    
+  </channel>
+</rss>

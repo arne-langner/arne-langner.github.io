@@ -29,5 +29,107 @@ What is it about? The book aims to serve as a practical and technical guide to t
 ]]></content>
         </item>
         
+        <item>
+            <title>ChatGPT 1 - Visualizing System Architecture using PlantUML</title>
+            <link>https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/</link>
+            <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+            
+            <guid>https://arne-langner.github.io/posts/2022/12/chatgpt-1-visualizing-system-architecture-using-plantuml/</guid>
+            <description>In this post we&amp;rsquo;ll have a look at ways to generate visualisations using the openAI&amp;rsquo;s chatGPT, and diagrams-as-code.
+chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though.</description>
+            <content type="html"><![CDATA[<p>In this post we&rsquo;ll have a look at ways to generate visualisations using the openAI&rsquo;s chatGPT, and diagrams-as-code.</p>
+<p>chatGPT does a great job at combining, summarizing and cross-referencing text. In many use-cases I would prefer to get some kind of visual overview though, either for my own comprehension or in order to present this information to others. The current UI of chatGPT does not provide any other output than text though. As it turns out, this is not much of a dealbreaker, as ChatGPT is capable of producing both structured data and code. Combine this with one of the many diagram-as-code tools that use a domain-specific language to define the diagram content and layout and you have at your disposal the tools needed to generate all kinds of visualisations using ChatGPT.</p>
+<p>In this post, we will describe a (very basic) system architecture in text and use ChatGPT to generate a visualisation.</p>
+<h2 id="tools">Tools</h2>
+<p><strong>Note:</strong> In the examples shown here, I will be using the <a href="https://beta.openai.com/playground">openAI playground</a>. It offers the same davinci-003 model that also powers the regular ChatGPT service but allows for cleaner output, more tuning options, and - seemingly - fewer throttling of requests.</p>
+<p><a href="https://plantuml.com/en/">PlantUML</a> is a diagram-as-code tool that generates various UML diagrams from specifically structured text. It supports suitable diagrams for many static and dynamic contexts. A <a href="http://www.plantuml.com/plantuml">free web renderer</a> is available which I will be using for this example.</p>
+<h3 id="the-chat">The Chat</h3>
+<p>First, I describe a simple system architecture consisting of two servers running two applications with some minor additions:</p>
+<blockquote>
+<p>Client ACME operates two servers in their data center.  Server A runs Windows Server 2008. It hosts the CRM application FOO that connects to a FilebaseDB, which serves as an interface to a MySQL database. All of these components run on the same server.  Users from Team Foo connect to this server via a local client. Server B runs CentOS. It hosts logistics application BAR. BAR connects to a Oracle database on the same server, and also to an external SAP system. Users from Team Bar log into the BAR application via a web interface.</p>
+<p>Extract all named entities as bullet points. Describe each entity in one sentence, focusing on their location and connections to other entities.</p>
+</blockquote>
+<p>This yields the following summary:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">•</span> Server A: Windows Server <span style="color:#ae81ff">2008</span> running the CRM application FOO, which <span style="color:#f92672">is</span> connected to a FilebaseDB <span style="color:#f92672">and</span> a MySQL database, <span style="color:#f92672">and</span> accessed locally by users <span style="color:#f92672">from</span> Team Foo<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">•</span> Server B: CentOS hosting the logistics application BAR, which <span style="color:#f92672">is</span> connected to an Oracle database <span style="color:#f92672">and</span> an external SAP system, <span style="color:#f92672">and</span> accessed through a web interface by users <span style="color:#f92672">from</span> Team Bar<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">•</span> FilebaseDB: Database interface <span style="color:#66d9ef">for</span> MySQL database, located on Server A<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">•</span> MySQL database: Database connected to FilebaseDB on Server A<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">•</span> Oracle database: Database located on Server B, connected to logistics application BAR<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">•</span> SAP system: External system connected to logistics application BAR on Server B<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">•</span> Team Foo: Users who access Server A locally<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">•</span> Team Bar: Users who access Server B through a web interface<span style="color:#f92672">.</span>
+</span></span></code></pre></div><p>I then requested this summary to be represented in plantUML notation. Initally, I began this with the following prompt:</p>
+<blockquote>
+<p>Represent this information as a deployment diagram in plantUML notation. Render entities as components. Nest components according to their location. Draw edges for relationships and label edges according to the description above.</p>
+</blockquote>
+<p>This did inded begin to create code that looked like plantUML syntax, but needed a multitude of additional prompts to refine, fix and iron out syntax errors. You can see this odyssey in this <a href="/files/chatgpt_deployment_diagram.txt">complete chat protocol</a>), note that I tend to prefix my own inputs with a &ldquo;&gt;&rdquo; for clarity. ChatGPT does not seem to mind.</p>
+<p>Lesson learned, I started over with a much more precise prompt:</p>
+<blockquote>
+<p>Represent this information as a deployment diagram in plantUML notation. Render servers as nodes, databases as databases, user teams as actors, applications as components. Nest elements according to their location. Draw edges for relationships between applications, databases and users, not for servers. label edges according to the description above.</p>
+</blockquote>
+<p>As you can tell, I gave much more specifc instructions on how to use the plantUML syntax and how to represent the architectural components I described in the beginning. This yielded plantUML code that looked much more sane:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@startuml</span>
+</span></span><span style="display:flex;"><span>actor Team Foo
+</span></span><span style="display:flex;"><span>actor Team Bar
+</span></span><span style="display:flex;"><span>node <span style="color:#e6db74">&#34;Server A&#34;</span> {
+</span></span><span style="display:flex;"><span>    component FOO
+</span></span><span style="display:flex;"><span>    database FilebaseDB
+</span></span><span style="display:flex;"><span>    database MySQL
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>node <span style="color:#e6db74">&#34;Server B&#34;</span> {
+</span></span><span style="display:flex;"><span>    component BAR
+</span></span><span style="display:flex;"><span>    database Oracle
+</span></span><span style="display:flex;"><span>    SAP System
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>Team Foo <span style="color:#f92672">--&gt;</span> FOO : Accesses
+</span></span><span style="display:flex;"><span>FOO <span style="color:#f92672">--&gt;</span> FilebaseDB : Connects
+</span></span><span style="display:flex;"><span>FilebaseDB <span style="color:#f92672">--&gt;</span> MySQL : Serves <span style="color:#66d9ef">as</span> interface
+</span></span><span style="display:flex;"><span>Team Bar <span style="color:#f92672">--&gt;</span> BAR : Accesses
+</span></span><span style="display:flex;"><span>BAR <span style="color:#f92672">--&gt;</span> Oracle : Connects
+</span></span><span style="display:flex;"><span>BAR <span style="color:#f92672">--&gt;</span> SAP System : Connects
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@enduml</span>
+</span></span></code></pre></div><p>Much better, but syntactically invalid - missing quotes, once again, and some confusion regarding locations. Luckily, this was easily fixed with one more instruction:</p>
+<blockquote>
+<p>Put team names in quotes. SAP System should be in qoutes, and drawn as a component outside of Server B.</p>
+</blockquote>
+<p>This finally produced solid-looking plantUML code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@startuml</span>
+</span></span><span style="display:flex;"><span>actor <span style="color:#e6db74">&#34;Team Foo&#34;</span>
+</span></span><span style="display:flex;"><span>actor <span style="color:#e6db74">&#34;Team Bar&#34;</span>
+</span></span><span style="display:flex;"><span>node <span style="color:#e6db74">&#34;Server A&#34;</span> {
+</span></span><span style="display:flex;"><span>    component FOO
+</span></span><span style="display:flex;"><span>    database FilebaseDB
+</span></span><span style="display:flex;"><span>    database MySQL
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>node <span style="color:#e6db74">&#34;Server B&#34;</span> {
+</span></span><span style="display:flex;"><span>    component BAR
+</span></span><span style="display:flex;"><span>    database Oracle
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>component <span style="color:#e6db74">&#34;SAP System&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Team Foo&#34;</span> <span style="color:#f92672">--&gt;</span> FOO : Accesses
+</span></span><span style="display:flex;"><span>FOO <span style="color:#f92672">--&gt;</span> FilebaseDB : Connects
+</span></span><span style="display:flex;"><span>FilebaseDB <span style="color:#f92672">--&gt;</span> MySQL : Serves <span style="color:#66d9ef">as</span> interface
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Team Bar&#34;</span> <span style="color:#f92672">--&gt;</span> BAR : Accesses
+</span></span><span style="display:flex;"><span>BAR <span style="color:#f92672">--&gt;</span> Oracle : Connects
+</span></span><span style="display:flex;"><span>BAR <span style="color:#f92672">--&gt;</span> <span style="color:#e6db74">&#34;SAP System&#34;</span> : Connects
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@enduml</span>
+</span></span></code></pre></div><p>Rendered in the online renderer, this code produces this magnificent diagram:
+
+    <img src="/img/gpt_1_plantUML_final.png"  alt="Diagram"  class="center"  style="border-radius: 8px;"  />
+
+</p>
+<p>Ignoring both the somewhat nonsensical nature of the system described and my questionable use of UML semantics, this feels like a success!</p>
+<h3 id="findings">Findings</h3>
+<ul>
+<li>It won&rsquo;t go right on the first attempt (see <a href="/files/chatgpt_deployment_diagram.txt">complete chat protocol</a>) - that&rsquo;s okay, refine with additional prompts.</li>
+<li>Condensing instructions from multiple prompts into a single, more specific prompt will streamline future work much simpler.</li>
+<li>Knowing the right nomenclature really, really simplifies the process. PlantUML supports all 14 UML diagram types, and being able to tell ChatGPT which elements (actor, component, node, etc.) to use really makes it much easier to give precise instructions.  I would strongly suggest looking up the corresponding metamodel (ie. for the <a href="https://plantuml.com/en/deployment-diagram">deployment diagram</a>) to get a better feeling for what you should request in your prompts.</li>
+<li>ChatGPT frequently produces syntax errors, usually minor ones though, such as not quoting strings that contain spaces.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Clearly using diagram-as-code tools works to generate visualisations, though it may require a bit of experimentation. Based on the success of this experiment I&rsquo;ll add a few more articles on other kinds of visualisations, such as graphviz and mermaid.js.</p>
+]]></content>
+        </item>
+        
     </channel>
 </rss>
