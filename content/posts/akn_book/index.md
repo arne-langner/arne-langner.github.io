@@ -7,7 +7,7 @@ tags: ["book"]
 
 Good news, everybody: Our book 'Model-Driven Development of Akoma Ntoso Application Profiles' has been released! The book is a collaboration with my friends and former colleagues Amelie Flatt and Olof Leps. In it we outline a methodological framework for the use of model-driven development approaches to creating subschemas of the international Akoma Ntoso XML vocabulary for legislative documents.
 
-
+![Alt text](featured_cover.png "Book Cover")
 
 
 ## What is it about?
