@@ -13,13 +13,13 @@ title = "Arne Langner"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
 
-# [author]
-#   name = "Your name here"
-#   image = "img/blowfish_logo.png"
-#   headline = "I'm only human"
-#   bio = "A little bit about you"
-#   links = [
-#     { email = "mailto:hello@your_domain.com" },
+ [author]
+   name = "Arne Langner"
+   image = "img/blowfish_logo.png"
+   headline = "Cloud Architecture, Consulting & Writing"
+   bio = "A little bit about you"
+   links = [
+     { email = "mailto:mail@arnelangner.org" },
 #     { link = "https://link-to-some-website.com/" },
 #     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
 #     { apple = "https://www.apple.com" },
@@ -33,13 +33,13 @@ title = "Arne Langner"
 #     { foursquare = "https://foursquare.com/username" },
 #     { github = "https://github.com/username" },
 #     { gitlab = "https://gitlab.com/username" },
-#     { google = "https://www.google.com/" },
+     { google = "https://www.google.com/" },
 #     { hashnode = "https://username.hashnode.dev" },
 #     { instagram = "https://instagram.com/username" },
 #     { keybase = "https://keybase.io/username" },
 #     { kickstarter = "https://www.kickstarter.com/profile/username" },
 #     { lastfm = "https://lastfm.com/user/username" },
-#     { linkedin = "https://linkedin.com/in/username" },
+     { linkedin = "https://www.linkedin.com/in/arne-n-langner-260022115/" },
 #     { mastodon = "https://mastodon.instance/@username" },
 #     { medium = "https://medium.com/username" },
 #     { microsoft = "https://www.microsoft.com/" },
@@ -62,4 +62,4 @@ title = "Arne Langner"
 #     { whatsapp = "https://wa.me/phone-number" },
 #     { youtube = "https://youtube.com/username" },
 #     { ko-fi = "https://ko-fi.com/username" },
-#   ]
+   ]

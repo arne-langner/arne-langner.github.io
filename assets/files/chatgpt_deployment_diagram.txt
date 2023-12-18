@@ -1,0 +1,211 @@
+Client ACME operates two servers in their data center.  Server A runs Windows Server 2008. It hosts the CRM application FOO that connects to a FilebaseDB, which serves as an interface to a MySQL database. All of these components run on the same server.  Users from Team Foo connect to this server via a local client. Server B runs CentOS. It hosts logistics application BAR. BAR connects to a Oracle database on the same server, and also to an external SAP system. Users from Team Bar log into the BAR application via a web interface.
+
+> Extract all named entities as bullet points. Describe each entity in one sentence, focusing on their location and connections to other entities.
+
+• Server A: Windows Server 2008 running the CRM application FOO, which is connected to a FilebaseDB and a MySQL database, and accessed locally by users from Team Foo.
+• Server B: CentOS hosting the logistics application BAR, which is connected to an Oracle database and an external SAP system, and accessed through a web interface by users from Team Bar.
+• FilebaseDB: Database interface for MySQL database, located on Server A.
+• MySQL database: Database connected to FilebaseDB on Server A.
+• Oracle database: Database located on Server B, connected to logistics application BAR.
+• SAP system: External system connected to logistics application BAR on Server B.
+• Team Foo: Users who access Server A locally.
+• Team Bar: Users who access Server B through a web interface.
+
+> Represent this information as a deployment diagram in plantUML notation. Render entities as components. Nest components according to their location. Draw edges for relationships and label edges according to the description above.
+
+@startuml
+
+component ServerA {
+    component CRMApplication {
+        component FilebaseDB
+        component MySQLDatabase
+    }
+    TeamFoo
+}
+component ServerB {
+    component LogisticsApplication {
+        component OracleDatabase
+    }
+    SAPSystem
+    TeamBar
+}
+
+ServerA --> CRMApplication
+CRMApplication --> FilebaseDB
+CRMApplication --> MySQLDatabase
+ServerB --> LogisticsApplication
+LogisticsApplication --> OracleDatabase
+ServerB --> SAPSystem
+ServerB --> TeamBar
+ServerA --> TeamFoo
+
+@enduml
+
+> The nodes for the applications should be named according to the application names. Other components on the same servers are on the same level as the applications, not nested inside them.
+
+@startuml
+
+component ServerA {
+    FOO
+    component FilebaseDB
+    component MySQLDatabase
+    TeamFoo
+}
+component ServerB {
+    BAR
+    component OracleDatabase
+    SAPSystem
+    TeamBar
+}
+
+ServerA --> FOO
+ServerA --> FilebaseDB
+ServerA --> MySQLDatabase
+ServerB --> BAR
+ServerB --> OracleDatabase
+ServerB --> SAPSystem
+ServerB --> TeamBar
+ServerA --> TeamFoo
+
+@enduml
+
+** Note: This does not render correctly, the syntax is incorrect. **
+> The applications FOO and BAR are also components. The teams Foo and Bar are not components, but users. Label the edges according to the relationships.
+
+@startuml
+
+component ServerA {
+    component FOO
+    component FilebaseDB
+    component MySQLDatabase
+    TeamFoo
+}
+component ServerB {
+    component BAR
+    component OracleDatabase
+    SAPSystem
+    TeamBar
+}
+
+ServerA --> FOO : Hosts
+ServerA --> FilebaseDB : Connects to
+ServerA --> MySQLDatabase : Connects to
+ServerB --> BAR : Hosts
+ServerB --> OracleDatabase : Connects to
+ServerB --> SAPSystem : Connects to
+ServerB --> TeamBar : Accessed by
+ServerA --> TeamFoo : Accessed by
+
+@enduml
+
+> The SAP System node is also a component. Move the nodes for TeamFoo and TeamBar outside of serverA and serverB.
+
+@startuml
+
+component ServerA {
+    component FOO
+    component FilebaseDB
+    component MySQLDatabase
+}
+component ServerB {
+    component BAR
+    component OracleDatabase
+    component SAPSystem
+}
+component TeamFoo
+component TeamBar
+
+ServerA --> FOO : Hosts
+ServerA --> FilebaseDB : Connects to
+ServerA --> MySQLDatabase : Connects to
+ServerB --> BAR : Hosts
+ServerB --> OracleDatabase : Connects to
+ServerB --> SAPSystem : Connects to
+ServerB --> TeamBar : Accessed by
+ServerA --> TeamFoo : Accessed by
+
+@enduml
+
+> Turn nodes TeamFoo and TeamBar into actor elements.
+
+@startuml
+
+component ServerA {
+    component FOO
+    component FilebaseDB
+    component MySQLDatabase
+}
+component ServerB {
+    component BAR
+    component OracleDatabase
+    component SAPSystem
+}
+actor TeamFoo
+actor TeamBar
+
+ServerA --> FOO : Hosts
+ServerA --> FilebaseDB : Connects to
+ServerA --> MySQLDatabase : Connects to
+ServerB --> BAR : Hosts
+ServerB --> OracleDatabase : Connects to
+ServerB --> SAPSystem : Connects to
+ServerB --> TeamBar : Accessed by
+ServerA --> TeamFoo : Accessed by
+
+@enduml
+
+> Remove edges connecting the servers to other components. Connect the actors to the relevant applications, not servers.
+
+@startuml
+
+component ServerA {
+    component FOO
+    component FilebaseDB
+    component MySQLDatabase
+}
+component ServerB {
+    component BAR
+    component OracleDatabase
+    component SAPSystem
+}
+actor TeamFoo
+actor TeamBar
+
+FOO --> FilebaseDB : Connects to
+FOO --> MySQLDatabase : Connects to
+BAR --> OracleDatabase : Connects to
+BAR --> SAPSystem : Connects to
+TeamBar --> BAR : Accessed by
+TeamFoo --> FOO : Accessed by
+
+@enduml
+
+> Does application Foo really connect directly to the MySQL database?
+
+No, application Foo connects to the FilebaseDB, which serves as an interface to the MySQL database.
+
+> Recreate the diagram accordingly.
+
+@startuml
+
+component ServerA {
+    component FOO
+    component FilebaseDB
+    component MySQLDatabase
+}
+component ServerB {
+    component BAR
+    component OracleDatabase
+    component SAPSystem
+}
+actor TeamFoo
+actor TeamBar
+
+FOO --> FilebaseDB : Connects to
+FilebaseDB --> MySQLDatabase : Connects to
+BAR --> OracleDatabase : Connects to
+BAR --> SAPSystem : Connects to
+TeamBar --> BAR : Accessed by
+TeamFoo --> FOO : Accessed by
+
+@enduml
