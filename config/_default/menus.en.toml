@@ -18,10 +18,12 @@
 [[main]]
   name = "Biography"
   weight = 20
+  pageRef = "biography"
 
 [[main]]
   name = "Projects"
-  weight = 20
+  weight = 30
+  pageRef = "projects"
 
 #[[main]]
 #  name = "example sub-menu 1"
